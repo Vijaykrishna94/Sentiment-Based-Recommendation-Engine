@@ -1,0 +1,16 @@
+contractions
+Cython
+Flask
+gunicorn
+Jinja2
+joblib
+nltk
+numpy
+pandas
+pandas-profiling
+requests
+requests-oauthlib
+rsa
+scikit-learn
+scipy
+urllib3
