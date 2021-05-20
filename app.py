@@ -48,9 +48,9 @@ def predict():
     
         output = df.sort_values(by=['Sentiment'],ascending=False)[['Product','Sentiment']][0:5]
         final_output = render_template('index.html',table=output.to_html(index=False,justify='center',bold_rows = True))
-    except Exception as e:
+    except:
         
-        final_output =render_template('index.html',prediction_text = e) 
+        final_output =render_template('index.html',prediction_text = 'Invalid User Name) 
     return final_output
 
 
