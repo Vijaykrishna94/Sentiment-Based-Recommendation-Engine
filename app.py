@@ -16,7 +16,7 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    user_input = [str(x) for x  in request.form.values()][0]
+    user_input = [str(x).lower() for x  in request.form.values()][0]
     try:
         
  # Reading the User-User Pivoted File
