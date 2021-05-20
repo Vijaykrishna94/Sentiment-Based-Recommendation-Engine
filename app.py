@@ -20,20 +20,20 @@ def predict():
     try:
         
  # Reading the User-User Pivoted File
-        user_final_rating = pd.read_csv('C:/Users/Vijay Krishna/Desktop/Data_Science/UG/MachineLearning/Natural_Language_Processing/Capstone_Project/user_final_rating.csv')
+        user_final_rating = pd.read_csv('user_final_rating.csv')
         user_final_rating = user_final_rating.set_index('reviews_username')
         df = user_final_rating.loc[user_input].sort_values(ascending=False)[0:20]
     
  # Reading the Model File
-        infile = open('C:/Users/Vijay Krishna/Desktop/Data_Science/UG/MachineLearning/Natural_Language_Processing/Capstone_Project/logreg.sav','rb')
+        infile = open('logreg.sav','rb')
         logreg = pickle.load(infile)
         infile.close()
 
  # Reading the Mapping file 
-        df_main = pd.read_csv('C:/Users/Vijay Krishna/Desktop/Data_Science/UG/MachineLearning/Natural_Language_Processing/Capstone_Project/df_mapping.csv')
+        df_main = pd.read_csv('df_mapping.csv')
   
  # Reading the Vectorizer
-        infile = open('C:/Users/Vijay Krishna/Desktop/Data_Science/UG/MachineLearning/Natural_Language_Processing/Capstone_Project/vectorizer.pk','rb')
+        infile = open('vectorizer.pk','rb')
         vec = pickle.load(infile)
         infile.close()
     
