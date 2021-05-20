@@ -50,7 +50,7 @@ def predict():
         final_output = render_template('index.html',table=output.to_html(index=False,justify='center',bold_rows = True))
     except:
         
-        final_output =render_template('index.html',prediction_text = 'Invalid User Name) 
+        final_output =render_template('index.html',prediction_text = 'Invalid User Name') 
     return final_output
 
 
